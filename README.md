@@ -30,7 +30,7 @@ Foydalanuvchi 3 tagacha mahsulot tanlaydi va ularni jadval ko‘rinishida taqqos
 3. Dependencylarni o‘rnatasiz (npm install)
 4. Development serverni ishga tushirasiz (npm run dev)
 
-Loyiha (http://localhost:5173) da ochiladi
+  Loyiha (http://localhost:5173) da ochiladi
 
 
 ##COMPONENT ARXITEKTURASI
