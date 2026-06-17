@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Product Comparison Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Loyiha React va TypeScript yordamida yaratilgan mahsulotlarni taqqoslash vidjeti
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Foydalanuvchi 3 tagacha mahsulot tanlaydi va ularni jadval ko‘rinishida taqqoslaydi
 
-## React Compiler
+## Loyihaga qo'shilgan funksiyalar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 6+ mahsulotdan iborat hardcoded data
+- 3 tagacha mahsulotni taqqoslash imkoniyati
+- Tanlangan mahsulotlarni jadval ko‘rinishida chiqarish
+- Mahsulot xususiyatlarini qatorlarda ko‘rsatish
+- Qiymatlari farq qiladigan qatorlarni vizual ajratish
+- Mahsulotni taqqoslashdan olib tashlash imkoniyati
+- Sahifa yangilanganda tanlangan mahsulotlarni saqlab qolish (LocalStorage)
+- Responsive dizayn (desktop va mobile)
 
-## Expanding the ESLint configuration
+## Texnologiyalar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Loyiha quyidagicha ishga tushiriladi.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Repositoryni yuklab olasiz (git clone repository-url)
+2. Loyihaga kirasiz (cd product-comparison-widget)
+3. Dependencylarni o‘rnatasiz (npm install)
+4. Development serverni ishga tushirasiz (npm run dev)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Loyiha (http://localhost:5173) da ochiladi
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+COMPONENT ARXITEKTURASI
+Loyihani kichik va qayta ishlatiladigan komponentlarga ajratdim:
+  ProductList
+  ProductCard
+  ComparisonTable
+Bu kodni o‘qishni va keyinchalik kengaytirishni osonlashtiradi.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+STATE MANAGEMENT
+Bu loyiha uchun qo‘shimcha state management kutubxonalari (Redux va boshqalar) ishlatilmadi.
+React useState va custom hook yordamida state boshqarildi.
+Sababi loyiha hajmi kichik bo'lganligi uchun bu yechim yetarlich samara beradi.
+
+
+DATA PERSISTENCE
+Tanlangan mahsulotlarni saqlash uchun LocalStorage ishlardim
+Bu foydalanuvchi sahifani yangilaganda ham o‘z tanlovlarini yo‘qotmasligini ta'minlaydi.
+
+TYPESCRIPT USAGE
+TypeScript interface orqali mahsulot strukturasini aniqlash uchun ishlatdim.
+Bu kod xavfsizligi va xatolarni kamaytirishga yordam beradi.
+
+RESPONSIVE DESIGN
+Mobil qurilmalar uchun responsive layout qo‘shdim.
+
+Keyinchalik quyidagilarni qo'shish mumkin:
+  API orqali real mahsulotlarni olish
+  Search va filter
+  Dark mode
+  Animatsiyalar
+  Pagination
