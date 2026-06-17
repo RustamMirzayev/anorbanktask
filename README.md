@@ -29,8 +29,7 @@ Foydalanuvchi 3 tagacha mahsulot tanlaydi va ularni jadval ko‘rinishida taqqos
 2. Loyihaga kirasiz (cd product-comparison-widget)
 3. Dependencylarni o‘rnatasiz (npm install)
 4. Development serverni ishga tushirasiz (npm run dev)
-
-  Loyiha (http://localhost:5173) da ochiladi
+5. Loyiha (http://localhost:5173) da ochiladi
 
 
 ##COMPONENT ARXITEKTURASI
